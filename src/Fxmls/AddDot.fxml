@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import TextFields.MultiLetterTextField?>
+
+<AnchorPane maxHeight="-Infinity" stylesheets="/Styles/Style.css" styleClass="background" fx:id="AP" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddDot">
+   <children>
+       <MultiLetterTextField fx:id="Name" stylesheets="/Styles/Style.css" alignment="CENTER" focusTraversable="true" layoutX="51.0" layoutY="104.0" onKeyPressed="#NameEvent" prefHeight="30.0" prefWidth="80.0" promptText="Новая точка" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0"/>
+       <Button alignment="CENTER" stylesheets="/Styles/Style.css" layoutX="137.0" layoutY="104.0" mnemonicParsing="false" onAction="#AddNewDot" prefHeight="30.0" prefWidth="30.0" text="+" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0"/>
+      <TableView fx:id="Table" stylesheets="/Styles/Style.css" layoutX="50.0" layoutY="114.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+        <columns>
+          <TableColumn fx:id="NameColumn" editable="false" prefWidth="75.0" text="Название" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button alignment="CENTER" stylesheets="/Styles/Style.css" mnemonicParsing="false" onAction="#SaveDots" prefHeight="30.0" text="Записать точки" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0"/>
+   </children>
+</AnchorPane>

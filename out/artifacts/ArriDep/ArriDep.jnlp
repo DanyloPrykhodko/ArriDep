@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ArriDep.jnlp">
+  <information>
+    <title>ArriDep</title>
+    <vendor>DrPrykhodko</vendor>
+    <description>ArriDep</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ArriDep.jar" size="565989" download="eager" />
+    <jar href="Library/poi-3.15.jar" size="2579580" download="eager" />
+    <jar href="poi-3.15.jar" size="2579580" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="400" height="300" main-class="Classes.Main"  name="ArriDep" />
+  <update check="background"/>
+</jnlp>

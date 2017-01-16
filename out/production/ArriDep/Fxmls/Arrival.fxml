@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import TextFields.NumberTextField?>
+
+<?import TextFields.MultiLetterTextField?>
+<AnchorPane fx:id="AP" stylesheets="/Styles/Style.css" styleClass="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Arrival">
+    <children>
+        <Button fx:id="OpenButton" stylesheets="/Styles/Style.css" alignment="CENTER" layoutX="14.0" layoutY="162.0" mnemonicParsing="false" onAction="#OpenFile" prefHeight="30.0" prefWidth="160.0" text="Выбрать файл" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0"/>
+        <CheckBox fx:id="FactoryFile" stylesheets="/Styles/Style.css" layoutX="10.0" layoutY="45.0" mnemonicParsing="false" text="Заводской файл" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="45.0" />
+        <NumberTextField fx:id="Barcode" stylesheets="/Styles/Style.css" alignment="CENTER" disable="true" layoutX="10.0" layoutY="50.0" onKeyPressed="#ReadBarcode" prefHeight="30.0" prefWidth="160.0" promptText="Штрих-код" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="68.0"/>
+        <Label fx:id="Load" stylesheets="/Styles/Style.css" layoutX="10.0" layoutY="108.0" text="В базе: 0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="108.0"/>
+        <Label fx:id="Read" stylesheets="/Styles/Style.css" layoutX="10.0" layoutY="127.0" text="Считано: 0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="127.0"/>
+        <Button fx:id="SaveFile" stylesheets="/Styles/Style.css" alignment="CENTER" disable="true" layoutX="10.0" layoutY="185.0" mnemonicParsing="false" onAction="#SaveFile" prefHeight="30.0" prefWidth="160.0" text="Записать данные" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0"/>
+        <NumberTextField fx:id="Code" stylesheets="/Styles/Style.css" alignment="CENTER" disable="true" layoutX="190.0" layoutY="45.0" onKeyPressed="#CodeEvent" prefHeight="30.0" prefWidth="165.0" promptText="Артикул" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="45.0" />
+        <MultiLetterTextField fx:id="Type" stylesheets="/Styles/Style.css" alignment="CENTER" disable="true" layoutX="190.0" layoutY="80.0" onKeyPressed="#TypeEvent" prefHeight="30.0" prefWidth="165.0" promptText="Тип" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="80.0" />
+        <MultiLetterTextField fx:id="Color" stylesheets="/Styles/Style.css" alignment="CENTER" disable="true" layoutX="189.0" layoutY="115.0" onKeyPressed="#ColorEvent" prefHeight="30.0" prefWidth="165.0" promptText="Цвет" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="115.0" />
+        <ComboBox fx:id="Size" stylesheets="/Styles/Style.css" disable="true" editable="true" layoutX="190.0" layoutY="150.0" onAction="#SizeAction" onKeyReleased="#SizeEvent" prefHeight="30.0" prefWidth="165.0" promptText="Размер" visibleRowCount="5" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="150.0" />
+        <Button fx:id="AddButton" stylesheets="/Styles/Style.css" alignment="CENTER" disable="true" layoutX="190.0" layoutY="150.0" mnemonicParsing="false" onAction="#AddBarcode" prefHeight="30.0" prefWidth="200.0" text="Заполнить" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.bottomAnchor="45.0"/>
+        <Label alignment="CENTER" stylesheets="/Styles/Style.css" layoutX="191.0" layoutY="19.0" prefHeight="20.0" prefWidth="201.0" text="Данные товара" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0"/>
+        <Separator layoutX="179.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="179.0" AnchorPane.topAnchor="0.0" />
+        <CheckBox fx:id="RightCode" allowIndeterminate="true" disable="true" layoutX="366.0" layoutY="51.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="51.0" />
+        <CheckBox fx:id="RightType" disable="true" layoutX="366.0" layoutY="86.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="86.0" />
+        <CheckBox fx:id="RightColor" disable="true" layoutX="366.0" layoutY="121.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="121.0" />
+        <CheckBox fx:id="RightSize" disable="true" layoutX="366.0" layoutY="156.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="156.0" />
+        <Button fx:id="DepartureButton" stylesheets="/Styles/Style.css" alignment="CENTER" layoutX="10.0" layoutY="150.0" mnemonicParsing="false" onAction="#Departure" prefHeight="30.0" prefWidth="160.0" text="Отправить товар" textAlignment="CENTER" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="10.0"/>
+        <Button fx:id="ViewDataButton" stylesheets="/Styles/Style.css" alignment="CENTER" disable="true" layoutX="200.0" layoutY="205.0" mnemonicParsing="false" onAction="#ViewData" prefHeight="30.0" prefWidth="200.0" text="Показать данные" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0">
+        </Button>
+    </children>
+</AnchorPane>

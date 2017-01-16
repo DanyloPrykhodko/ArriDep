@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="AP" stylesheets="/Styles/Style.css" styleClass="background" prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ArrivalShowData">
+   <children>
+      <TableView fx:id="Table" stylesheets="/Styles/Style.css" layoutX="7.0" layoutY="121.0" prefHeight="206.0" prefWidth="206.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="42.0">
+        <columns>
+          <TableColumn fx:id="Barcode" prefWidth="75.0" text="Штрих-код" />
+          <TableColumn fx:id="Code" prefWidth="75.0" text="Артикул" />
+            <TableColumn fx:id="Type" prefWidth="75.0" text="Тип" />
+            <TableColumn fx:id="Color" prefWidth="75.0" text="Цвет" />
+            <TableColumn fx:id="Size" prefWidth="75.0" text="Размер" />
+            <TableColumn fx:id="Price" prefWidth="75.0" text="Цена" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <ToggleButton fx:id="AcceptButton" stylesheets="/Styles/Style.css" layoutX="105.0" layoutY="1.0" mnemonicParsing="false" onAction="#Accept" prefWidth="290.0" selected="true" text="Принято" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <ToggleButton fx:id="NotFoundButton" stylesheets="/Styles/Style.css" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#NotFound" prefWidth="273.0" text="Нет в базе" AnchorPane.leftAnchor="305.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="10.0" />
+      <ToggleButton fx:id="ExcessButton" stylesheets="/Styles/Style.css" layoutX="215.0" layoutY="20.0" mnemonicParsing="false" onAction="#Excess" prefWidth="290.0" text="Лишнее" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+   </children>
+</AnchorPane>

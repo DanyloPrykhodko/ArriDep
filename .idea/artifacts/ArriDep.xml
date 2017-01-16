@@ -1,0 +1,31 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="ArriDep">
+    <output-path>$PROJECT_DIR$/out/artifacts/ArriDep</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="Classes.Main" />
+        <option name="description" value="" />
+        <option name="height" value="300" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="icons">
+          <JavaFxApplicationIcons>
+            <option name="linuxIcon" value="$PROJECT_DIR$/src/Images/ArriDep.png" />
+            <option name="macIcon" value="$PROJECT_DIR$/src/Images/ArriDep.icns" />
+            <option name="windowsIcon" value="$PROJECT_DIR$/src/Images/ArriDep.icns" />
+          </JavaFxApplicationIcons>
+        </option>
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="ArriDep" />
+        <option name="vendor" value="DrPrykhodko" />
+        <option name="version" value="1.0" />
+        <option name="width" value="400" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="ArriDep.jar">
+        <element id="module-output" name="ArriDep" />
+      </element>
+      <element id="library" level="project" name="poi-3.15" />
+    </root>
+  </artifact>
+</component>
